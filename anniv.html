@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rd Anniversary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="anniv.css" />
+  </head>
+  <body class="relative bg-pink-100 min-h-screen flex items-center justify-center overflow-hidden">
+    
+    <!-- Top-left image -->
+    <a target="_blank" class="corner-img top-left">
+      <img src="https://i.imgur.com/cZekMsG.jpeg" alt="Top Left" class="img" />
+    </a>
+
+    <!-- Top-right image -->
+    <a target="_blank" class="corner-img top-right">
+      <img src="https://i.imgur.com/HpjHyc4.jpeg" alt="Top Right" class="img" />
+    </a>
+
+    <!-- Bottom-left image -->
+    <a target="_blank" class="corner-img bottom-left">
+      <img src="https://i.imgur.com/SfIIdNr.jpeg" alt="Bottom Left" class="img" />
+    </a>
+
+    <!-- Bottom-right image -->
+    <a target="_blank" class="corner-img bottom-right">
+      <img src="https://i.imgur.com/1TsTARk.jpeg" alt="Bottom Right" class="img" />
+    </a>
+
+    <!-- Center message box -->
+    <div class="bg-white rounded-2xl shadow-2xl p-10 max-w-xl text-center z-10">
+      <h1 class="text-4xl font-bold text-pink-600 mb-4">Happy 3rd Anniversary! 💖</h1>
+      <p class="text-gray-700 text-lg mb-6">
+        "No matter which worldline, what time , or where I am I'll always love you" 💑
+      </p>
+      <img
+        src="https://i.imgur.com/ctoDvEd.jpeg"
+        alt="Anniversary"
+        class="rounded-xl shadow-lg mb-6 w-full"
+      />
+      <p class="text-pink-500 text-xl font-semibold">To more anniversaries to come!</p>
+
+        <!-- Button to reveal bonus image -->
+        <button
+        id="bonusBtn"
+        class="mt-6 px-4 py-2 text-white bg-pink-600 rounded-full shadow-md hover:bg-pink-500 transition-all"
+        onclick="revealBonusImage()"
+        >
+          Bonus Picture, please click me! 🎁
+        </button>
+  
+        <!-- Hidden bonus image -->
+        <div id="bonusImage" class="hidden mt-6">
+          <img
+            src="https://i.imgur.com/Ro0f07u.jpeg"
+            alt="Bonus"
+            class="rounded-xl shadow-lg w-full"
+          />
+        </div>
+    </div>
+
+    <script>
+        // Function to reveal the bonus image and enable scrolling
+        function revealBonusImage() {
+        const bonusImage = document.getElementById('bonusImage');
+        bonusImage.classList.toggle('show'); // Show/hide the image
+        
+        // Force body to show scrollbar if content overflows
+        document.body.style.overflowY = 'auto';  // Ensure the vertical scrollbar shows if necessary
+        }
+      </script>
+      
+  </body>
+</html>
